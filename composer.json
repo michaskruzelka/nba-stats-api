@@ -1,0 +1,21 @@
+{
+    "name": "michaskruzelka/nba-stats-api",
+    "description": "A wrapper for NBA Stats API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "michaskruzelka",
+            "email": "michaskruzelka@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Michaskruzelka\\NBA\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    }
+}
