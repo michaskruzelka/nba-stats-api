@@ -2,17 +2,24 @@
 
 namespace Michaskruzelka\NBA\Api\Endpoint;
 
-class CommonTeamYears extends EndpointDefault
+class FranchiseHistory extends EndpointDefault
 {
-    protected $point = 'commonteamyears';
+    /**
+     * @var string
+     */
+    protected $point = 'franchisehistory';
 
+    /**
+     * @var string
+     */
     protected $leagueID;
 
     /**
-     * CommonTeamYears constructor.
-     * @param string|null $leagueID
+     * FranchiseHistory constructor.
+     * @param null|string $leagueID
      */
-    public function __construct($leagueID = null) {
+    public function __construct($leagueID = null)
+    {
         $this->leagueID = $leagueID ? $leagueID : static::getDefaultLeagueID();
     }
 
