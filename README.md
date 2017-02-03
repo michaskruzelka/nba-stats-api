@@ -5,15 +5,13 @@ In development...
 Example
 
 ```php
-require_once 'vendor/autoload.php';
-
 use Michaskruzelka\NBA\Api;
 
 $api = Api::instance();
 
 $resource = $api->franchiseHistory();
 
-$fh = $res->getFranchiseHistoryByTeamCity('Milwaukee');
+$fh = $resource->getFranchiseHistoryByTeamCity('Milwaukee');
 ```
 
 ## License
