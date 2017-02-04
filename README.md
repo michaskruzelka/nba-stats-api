@@ -40,6 +40,7 @@ See the [wiki](https://github.com/michaskruzelka/nba-stats-api/wiki).
 
 ## Extend functionality
 The package is open for extension:
+
 1) Create your own endpoint. It must implement
 Michaskruzelka\NBA\Api\Endpoint\Endpoint. You can extend your
 class from Michaskruzelka\NBA\Api\Endpoint\EndpointDefault
@@ -50,6 +51,7 @@ $client = new Client();
 $resource = $client->send(new [Your_Endpoint]([all the necessary arguments]));
 ```
 $resource is instance of Michaskruzelka\NBA\Api\Resource\ResourceDefault.
+
 2) You can create your own resource. It must implement
 Michaskruzelka\NBA\Api\Resource\Resource.
 ```php
