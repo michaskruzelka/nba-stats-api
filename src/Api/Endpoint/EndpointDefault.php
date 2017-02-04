@@ -2,6 +2,8 @@
 
 namespace Michaskruzelka\NBA\Api\Endpoint;
 
+use Michaskruzelka\NBA\Api\Constants;
+
 abstract class EndpointDefault implements Endpoint
 {
     /**
@@ -23,7 +25,8 @@ abstract class EndpointDefault implements Endpoint
      */
     protected static function getDefaultLeagueID()
     {
-        return '00';
+        $leagues = Constants::LEAGUES;
+        return $leagues['NBA'];
     }
 
     /**
