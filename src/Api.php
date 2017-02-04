@@ -50,4 +50,40 @@ final class Api
             new Resource\FranchiseHistory()
         );
     }
+
+    /**
+     * @param null|string $leagueID
+     * @param null|string|int $season Full Year (2016)
+     * @param null|string|int $teamID
+     * @param null|string|int $roundNum
+     * @param null|string|int $roundPick
+     * @param null|string|int $overallPick
+     * @param null|string $topX
+     * @param null|string $college
+     * @return Resource\DraftHistory
+     */
+    public function draftHistory(
+        $leagueID = null,
+        $season = null,
+        $teamID = null,
+        $roundNum = null,
+        $roundPick = null,
+        $overallPick = null,
+        $topX = null,
+        $college = null
+    ) {
+        return $this->client->send(
+            new Endpoint\DraftHistory(
+                $leagueID,
+                $season,
+                $teamID,
+                $roundNum,
+                $roundPick,
+                $overallPick,
+                $topX,
+                $college
+            ),
+            new Resource\DraftHistory()
+        );
+    }
 }
