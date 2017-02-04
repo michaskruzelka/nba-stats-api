@@ -4,22 +4,49 @@ namespace Michaskruzelka\NBA\Api\Endpoint;
 
 class DraftHistory extends EndpointDefault
 {
+    /**
+     * @var string
+     */
     protected $point = 'drafthistory';
 
+    /**
+     * @var string
+     */
     protected $leagueID;
 
+    /**
+     * @var int|null|string
+     */
     protected $season;
 
+    /**
+     * @var int|null|string
+     */
     protected $teamID;
 
+    /**
+     * @var int|null|string
+     */
     protected $roundNum;
 
+    /**
+     * @var int|null|string
+     */
     protected $roundPick;
 
+    /**
+     * @var int|null|string
+     */
     protected $overallPick;
 
+    /**
+     * @var null|string
+     */
     protected $topX;
 
+    /**
+     * @var null|string
+     */
     protected $college;
 
     /**

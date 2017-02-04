@@ -7,8 +7,14 @@ namespace Michaskruzelka\NBA\Api\Resource;
  */
 class DraftHistory extends ResourceDefault
 {
+    /**
+     * @var string
+     */
     protected $name = 'drafthistory';
 
+    /**
+     * @var array
+     */
     protected $resultSetNames = [
         'DraftHistory'
     ];

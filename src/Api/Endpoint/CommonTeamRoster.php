@@ -16,9 +16,9 @@ class CommonTeamRoster extends EndpointDefault
      * CommonTeamRoster constructor.
      * @param string $teamID
      * @param string|null $season
-     * @param string $leagueID
+     * @param string|null $leagueID
      */
-    public function __construct($teamID = null, $season = null, $leagueID = null) {
+    public function __construct($teamID, $season = null, $leagueID = null) {
         $this->teamID = $teamID;
         $this->leagueID = $leagueID ? $leagueID : static::getDefaultLeagueID();
         $this->season = $season ? $season : static::getDefaultSeason();

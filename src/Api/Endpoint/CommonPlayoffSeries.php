@@ -6,16 +6,26 @@ class CommonPlayoffSeries extends EndpointDefault
 {
     protected $point = 'commonplayoffseries';
 
+    /**
+     * @var string
+     */
     protected $leagueID;
 
+    /**
+     * @var string
+     */
     protected $season;
 
+    /**
+     * @var null|string
+     */
     protected $seriesID;
 
     /**
      * CommonPlayoffSeries constructor.
-     * @param string $leagueID
-     * @param string $season
+     * @param string|null $leagueID
+     * @param string|null $season
+     * @param string|null $seriesID
      */
     public function __construct($leagueID = null, $season = null, $seriesID = null) {
         $this->leagueID = $leagueID ? $leagueID : static::getDefaultLeagueID();

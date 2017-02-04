@@ -8,8 +8,14 @@ namespace Michaskruzelka\NBA\Api\Resource;
  */
 class CommonTeamRoster extends ResourceDefault
 {
+    /**
+     * @var string
+     */
     protected $name = 'commonteamroster';
 
+    /**
+     * @var array
+     */
     protected $resultSetNames = [
         'CommonTeamRoster',
         'Coaches'

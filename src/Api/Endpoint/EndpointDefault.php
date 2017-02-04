@@ -18,11 +18,17 @@ abstract class EndpointDefault implements Endpoint
         return (string) $this->point;
     }
 
+    /**
+     * @return string
+     */
     protected static function getDefaultLeagueID()
     {
         return '00';
     }
 
+    /**
+     * @return string
+     */
     protected static function getDefaultSeason()
     {
         $date = new \DateTime();

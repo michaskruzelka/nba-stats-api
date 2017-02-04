@@ -7,8 +7,14 @@ namespace Michaskruzelka\NBA\Api\Resource;
  */
 class DraftCombinePlayerAnthro extends ResourceDefault
 {
+    /**
+     * @var string
+     */
     protected $name = 'draftcombineplayeranthro';
 
+    /**
+     * @var array
+     */
     protected $resultSetNames = [
         'Results'
     ];

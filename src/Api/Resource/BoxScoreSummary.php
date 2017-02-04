@@ -16,8 +16,14 @@ namespace Michaskruzelka\NBA\Api\Resource;
  */
 class BoxScoreSummary extends ResourceDefault
 {
+    /**
+     * @var string
+     */
     protected $name = 'boxscoresummary';
 
+    /**
+     * @var array
+     */
     protected $resultSetNames = [
         'PlayerTrack',
         'PlayerTrackTeam',

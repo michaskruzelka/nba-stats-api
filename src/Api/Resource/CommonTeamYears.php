@@ -7,8 +7,14 @@ namespace Michaskruzelka\NBA\Api\Resource;
  */
 class CommonTeamYears extends ResourceDefault
 {
+    /**
+     * @var string
+     */
     protected $name = 'commonteamyears';
 
+    /**
+     * @var array
+     */
     protected $resultSetNames = [
         'TeamYears'
     ];

@@ -6,10 +6,19 @@ class CommonAllPlayers extends EndpointDefault
 {
     protected $point = 'commonallplayers';
 
+    /**
+     * @var string
+     */
     protected $leagueID;
 
+    /**
+     * @var string
+     */
     protected $season;
 
+    /**
+     * @var int
+     */
     protected $onlyCurrent;
 
     /**

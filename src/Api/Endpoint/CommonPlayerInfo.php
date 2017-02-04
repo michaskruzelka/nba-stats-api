@@ -4,8 +4,14 @@ namespace Michaskruzelka\NBA\Api\Endpoint;
 
 class CommonPlayerInfo extends EndpointDefault
 {
+    /**
+     * @var string
+     */
     protected $point = 'commonplayerinfo';
 
+    /**
+     * @var int|string
+     */
     protected $playerID;
 
     /**

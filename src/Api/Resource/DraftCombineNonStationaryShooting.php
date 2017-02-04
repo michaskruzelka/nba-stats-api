@@ -7,8 +7,14 @@ namespace Michaskruzelka\NBA\Api\Resource;
  */
 class DraftCombineNonStationaryShooting extends ResourceDefault
 {
+    /**
+     * @var string
+     */
     protected $name = 'draftcombinenonstationaryshooting';
 
+    /**
+     * @var array
+     */
     protected $resultSetNames = [
         'Results'
     ];
