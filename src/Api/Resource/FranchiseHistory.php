@@ -4,9 +4,9 @@ namespace Michaskruzelka\NBA\Api\Resource;
 
 /**
  * @method array getFranchiseHistory
- * @method array getFranchiseHistoryByTeamId
- * @method array getFranchiseHistoryByTeamCity
- * @method array getFranchiseHistoryByTeamName
+ * @method array getFranchiseHistoryByTeamId($int)
+ * @method array getFranchiseHistoryByTeamCity($string)
+ * @method array getFranchiseHistoryByTeamName($string)
  * @method array getDefunctTeams
  */
 class FranchiseHistory extends ResourceDefault
@@ -25,7 +25,7 @@ class FranchiseHistory extends ResourceDefault
     ];
 
     /**
-     * @param string|int $year
+     * @param string $year
      * @return array
      */
     public function getFranchiseHistoryStarting($year)
