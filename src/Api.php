@@ -138,4 +138,83 @@ final class Api
             new Resource\DraftCombineSpotShooting()
         );
     }
+
+    /**
+     * @param string|null $leagueID
+     * @param string|null $seasonYear
+     * @return Resource\DraftCombineStats
+     */
+    public function draftCombineStats($leagueID = null, $seasonYear = null)
+    {
+        return $this->client->send(
+            new Endpoint\DraftCombineStats($leagueID, $seasonYear),
+            new Resource\DraftCombineStats()
+        );
+    }
+
+    /**
+     * @param null|string $leagueID
+     * @return Resource\CommonTeamYears
+     */
+    public function commonTeamYears($leagueID = null)
+    {
+        return $this->client->send(
+            new Endpoint\CommonTeamYears($leagueID),
+            new Resource\CommonTeamYears()
+        );
+    }
+
+    /**
+     * @param null|string $leagueID
+     * @param null|string $season
+     * @param null|int $onlyCurrent
+     * @return Resource\Resource
+     */
+    public function commonAllPlayers($leagueID = null, $season = null, $onlyCurrent = 1)
+    {
+        return $this->client->send(
+            new Endpoint\CommonAllPlayers($leagueID, $season, $onlyCurrent),
+            new Resource\CommonAllPlayers()
+        );
+    }
+
+    /**
+     * @param int $playerID
+     * @return Resource\Resource
+     */
+    public function commonPlayerInfo($playerID)
+    {
+        return $this->client->send(
+            new Endpoint\CommonPlayerInfo($playerID),
+            new Resource\CommonPlayerInfo()
+        );
+    }
+
+    /**
+     * @param string|null $leagueID
+     * @param string|null $season
+     * @param string|null $seriesID
+     * @return Resource\Resource
+     */
+    public function commonPlayoffSeries($leagueID = null, $season = null, $seriesID = null)
+    {
+        return $this->client->send(
+            new Endpoint\CommonPlayoffSeries($leagueID, $season, $seriesID),
+            new Resource\CommonPlayoffSeries()
+        );
+    }
+
+    /**
+     * @param int $teamID
+     * @param null|string $season
+     * @param null|string $leagueID
+     * @return Resource\Resource
+     */
+    public function commonTeamRoster($teamID, $season = null, $leagueID = null)
+    {
+        return $this->client->send(
+            new Endpoint\CommonTeamRoster($teamID, $season, $leagueID),
+            new Resource\CommonTeamRoster()
+        );
+    }
 }
