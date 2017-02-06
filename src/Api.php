@@ -86,4 +86,17 @@ final class Api
             new Resource\DraftHistory()
         );
     }
+
+    /**
+     * @param string|null $leagueID
+     * @param string|null $seasonYear Season (2015-16)
+     * @return Resource\DraftCombineDrillResults
+     */
+    public function draftCombineDrillResults($leagueID = null, $seasonYear = null)
+    {
+        return $this->client->send(
+            new Endpoint\DraftCombineDrillResults($leagueID, $seasonYear),
+            new Resource\DraftCombineDrillResults()
+        );
+    }
 }

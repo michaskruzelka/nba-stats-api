@@ -278,6 +278,8 @@ class Constants
 
     const LEAGUES = [
         'NBA' => '00',
-        'ABA' => '01'
+        'ABA' => '01',
+        'WNBA' => '10',
+        'D' => '20'
     ];
 }
