@@ -2,6 +2,7 @@
 
 namespace Michaskruzelka\NBA\Api;
 
+use GuzzleHttp\Exception\RequestException;
 use Michaskruzelka\NBA\Api\Endpoint\Endpoint;
 use Michaskruzelka\NBA\Api\Resource;
 
@@ -41,14 +42,25 @@ class Client
      */
     public function send(Endpoint $endpoint, Resource\Resource $resource = null)
     {
-        $response = $this->request->get("{$this->getApiUrl()}/{$endpoint}", [
-            'query' => $endpoint->getParams(),
-            //'http_errors' => false,
-            'headers' => [
-                'Referer' => $this->getApiUrl()
-            ]
-        ]);
-        $body = json_decode($response->getBody()->getContents(), true);
+        try {
+            $response = $this->request->get("{$this->getApiUrl()}/{$endpoint}", [
+                'query' => $endpoint->getParams(),
+                'headers' => [
+                    'Referer' => $this->getApiUrl()
+                ]
+            ]);
+            $body = json_decode($response->getBody()->getContents(), true);
+        } catch (RequestException $e) {
+            $body = [
+                'resultSets' => [[
+                    'name' => $e->getCode(),
+                    'message' => $e->getMessage()
+                ]],
+                'parameters' => $endpoint->getParams(),
+                'resource' => 'error'
+            ];
+            $resource = null;
+        }
         return $this->getResource($body, $resource);
     }
 
