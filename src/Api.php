@@ -113,8 +113,29 @@ final class Api
         );
     }
 
-//    public function draftCombinePlayerAnthro($leagueID = null, $seasonYear = null)
-//    {
-//        return $this->client-
-//    }
+    /**
+     * @param string|null $leagueID
+     * @param string|null $seasonYear
+     * @return Resource\DraftCombinePlayerAnthro
+     */
+    public function draftCombinePlayerAnthro($leagueID = null, $seasonYear = null)
+    {
+        return $this->client->send(
+            new Endpoint\DraftCombinePlayerAnthro($leagueID, $seasonYear),
+            new Resource\DraftCombinePlayerAnthro()
+        );
+    }
+
+    /**
+     * @param string|null $leagueID
+     * @param string|null $seasonYear
+     * @return Resource\DraftCombineSpotShooting
+     */
+    public function draftCombineSpotShooting($leagueID = null, $seasonYear = null)
+    {
+        return $this->client->send(
+            new Endpoint\DraftCombineSpotShooting($leagueID, $seasonYear),
+            new Resource\DraftCombineSpotShooting()
+        );
+    }
 }
