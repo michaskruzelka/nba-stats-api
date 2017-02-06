@@ -99,4 +99,22 @@ final class Api
             new Resource\DraftCombineDrillResults()
         );
     }
+
+    /**
+     * @param string|null $leagueID
+     * @param string|null $seasonYear
+     * @return Resource\DraftCombineNonStationaryShooting
+     */
+    public function draftCombineNonStationaryShooting($leagueID = null, $seasonYear = null)
+    {
+        return $this->client->send(
+            new Endpoint\DraftCombineNonStationaryShooting($leagueID, $seasonYear),
+            new Resource\DraftCombineNonStationaryShooting()
+        );
+    }
+
+//    public function draftCombinePlayerAnthro($leagueID = null, $seasonYear = null)
+//    {
+//        return $this->client-
+//    }
 }
