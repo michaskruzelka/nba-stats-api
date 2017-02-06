@@ -4,6 +4,9 @@ namespace Michaskruzelka\NBA\Api\Endpoint;
 
 class CommonAllPlayers extends EndpointDefault
 {
+    /**
+     * @var string
+     */
     protected $point = 'commonallplayers';
 
     /**

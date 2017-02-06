@@ -4,12 +4,24 @@ namespace Michaskruzelka\NBA\Api\Endpoint;
 
 class CommonTeamRoster extends EndpointDefault
 {
+    /**
+     * @var string
+     */
     protected $point = 'commonteamroster';
 
+    /**
+     * @var int
+     */
     protected $teamID;
 
+    /**
+     * @var null|string
+     */
     protected $leagueID;
 
+    /**
+     * @var string
+     */
     protected $season;
 
     /**
@@ -20,7 +32,7 @@ class CommonTeamRoster extends EndpointDefault
      */
     public function __construct($teamID, $season = null, $leagueID = null) {
         $this->teamID = $teamID;
-        $this->leagueID = $leagueID ? $leagueID : static::getDefaultLeagueID();
+        $this->leagueID = $leagueID;
         $this->season = $season ? $season : static::getDefaultSeason();
     }
 
